@@ -67,22 +67,23 @@ main{flex:1;display:flex;align-items:center;justify-content:center;padding:10px 
     <div class="senal">
       <svg width="92" height="200" viewBox="0 0 92 200" aria-label="Señal ferroviaria en ámbar">
         <!-- mástil y base -->
-        <rect x="41" y="120" width="10" height="66" rx="3" fill="#3c4a6b"/>
-        <rect x="26" y="186" width="40" height="8" rx="4" fill="#2a3a5e"/>
-        <!-- cabeza de señal -->
-        <rect x="16" y="8" width="60" height="116" rx="16" fill="#0f1830" stroke="#3c4a6b" stroke-width="2"/>
+        <rect x="41" y="136" width="10" height="56" rx="3" fill="#3c4a6b"/>
+        <rect x="26" y="192" width="40" height="8" rx="4" fill="#2a3a5e"/>
+        <!-- cabeza de señal: y 8..140, centro en 74; focos a 36 / 74 / 112,
+             con 14 px de margen simétrico arriba y abajo -->
+        <rect x="16" y="8" width="60" height="132" rx="16" fill="#0f1830" stroke="#3c4a6b" stroke-width="2"/>
         <!-- foco rojo (apagado) -->
-        <circle cx="46" cy="34" r="14" fill="#2a1f28" stroke="#3c4a6b" stroke-width="1.5"/>
-        <circle cx="46" cy="34" r="6" fill="#4a2b33"/>
+        <circle cx="46" cy="36" r="14" fill="#2a1f28" stroke="#3c4a6b" stroke-width="1.5"/>
+        <circle cx="46" cy="36" r="6" fill="#4a2b33"/>
         <!-- foco ámbar (encendido) -->
         <g class="lampara-ambar">
-          <circle cx="46" cy="72" r="21" fill="rgba(242,177,52,.16)"/>
-          <circle cx="46" cy="72" r="14" fill="#f2b134" stroke="#ffd989" stroke-width="1.5"/>
-          <circle cx="41" cy="67" r="4" fill="#fff0c9" opacity=".85"/>
+          <circle cx="46" cy="74" r="21" fill="rgba(242,177,52,.16)"/>
+          <circle cx="46" cy="74" r="14" fill="#f2b134" stroke="#ffd989" stroke-width="1.5"/>
+          <circle cx="41" cy="69" r="4" fill="#fff0c9" opacity=".85"/>
         </g>
         <!-- foco verde (apagado) -->
-        <circle cx="46" cy="110" r="14" fill="#16302a" stroke="#3c4a6b" stroke-width="1.5"/>
-        <circle cx="46" cy="110" r="6" fill="#1e4a3c"/>
+        <circle cx="46" cy="112" r="14" fill="#16302a" stroke="#3c4a6b" stroke-width="1.5"/>
+        <circle cx="46" cy="112" r="6" fill="#1e4a3c"/>
       </svg>
     </div>
 
