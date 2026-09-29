@@ -331,6 +331,20 @@ function updateResetBtn() {
   document.getElementById('btnReset').disabled = !hasFilters();
 }
 
+// El boton 'Progreso instalacion' solo se habilita si el progreso (instalaciones
+// completadas sobre los registros filtrados) es mayor de 0.
+function updateProgresoBtn() {
+  const btn = document.getElementById('btnProgreso');
+  if (!btn) return;
+  let hayProgreso = false;
+  if (INSTALACION_ACTIVA && SEQ_COL_HEADER) {
+    for (const r of filtered) {
+      if (instalacionEstado(r) === 'completa') { hayProgreso = true; break; }
+    }
+  }
+  btn.disabled = !hayProgreso;
+}
+
 function applyFilters() {
   updateAllFilters();
   const f = getActiveFilters();
@@ -338,6 +352,7 @@ function applyFilters() {
   if (sortCol >= 0) doSort();
   renderTable();
   updateResetBtn();
+  updateProgresoBtn();
 }
 
 function sortBy(col, th) {
